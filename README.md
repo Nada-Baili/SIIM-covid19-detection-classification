@@ -18,7 +18,7 @@ The second task is to identify the detected opacities as _'atypical', 'indetermi
 The results of the trained CNN will be saved under **CNN/results**. Plots of the evolution of the training and validation loss and accuracy will be saved, as well as the confusion matrix.
 
 ### LightGBM
-We explore an approach that is based on machine learning to improve the classification results. For each image, we extract a 128-D feature vector from each trained CNN model (of the 5 folds). These feature vectors are extracted from the last layer of the network, right before the classification layer. We also consider the box area and the box aspect ratio (if there are no detections in an image then the box area and the aspect ratio are null). Thus, each image can be represented by a 130-d feature vector that we pass to a lightgbm model for classification.
+We explore an approach that is based on machine learning to improve the classification results. For each image, we extract a 128-D feature vector from each trained CNN model (of the 5 folds). These feature vectors are extracted from the last layer of the network, right before the classification layer. We also consider the box area and the box aspect ratio (if there are no detections in an image then the box area and the aspect ratio are null). Thus, each image can be represented by a 130-D feature vector that we pass to a lightgbm model for classification.
 To get classification results using this approach, run `python ML_model.py` and specify the directory where you stored the 5 checkpoints of the CNN model.
 
 ## Inference
