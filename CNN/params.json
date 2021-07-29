@@ -1,0 +1,9 @@
+{
+  "train_df": "D:/Nada/kaggle/SIIM-covid19-detection-classification/input/train.csv",
+  "train_images_path": "D:/Nada/kaggle/SIIM-covid19-detection-classification/yolov5/covid19/images",
+  "test_images_path": "D:/Nada/kaggle/SIIM-covid19-detection-classification/yolov5/covid19_test_images",
+  "BATCH_SIZE": 128,
+  "IMG_SIZE": 256,
+  "EPOCHS": 50,
+  "LR": 4e-5
+}
