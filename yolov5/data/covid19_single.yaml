@@ -1,0 +1,8 @@
+train: ./covid19/train/images/
+val: ./covid19/val/images/
+
+# number of classes
+nc: 1
+
+# class names
+names: [ 'opacity' ]

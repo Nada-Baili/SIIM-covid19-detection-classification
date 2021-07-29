@@ -1,0 +1,8 @@
+train: /home/n0bail04/Covid19-Detection/yolov5/covid19/images/ 
+val: /home/n0bail04/Covid19-Detection/yolov5/covid19/images/  
+
+# number of classes
+nc: 3
+
+# class names
+names: ['typical', 'atypical', 'indeterminate']
