@@ -1,5 +1,6 @@
 # SIIM-covid19-detection-classification
-Problem description
+This problem is a Kaggle competition (https://www.kaggle.com/c/siim-covid19-detection). In this competition, we are identifying and localizing COVID-19 abnormalities on chest radiographs. This is an object detection and classification problem. For each test image, we will be predicting a bounding box and class for all findings. Further, for each test study, we should make a determination within the following labels: 'Negative for Pneumonia' 'Typical Appearance' 'Indeterminate Appearance' 'Atypical Appearance'.
+
 ## YOLOv5
 The first task is to detect the opacities. To do so, we retrain YOLOv5 on the provided data, as follows:
 * Modify the value of the column "_dcm_path_" in the csv files  **input/train.csv** and **input/ss.csv** to match the directory where you store the competition data.
@@ -22,3 +23,4 @@ We explore an approach that is based on machine learning to improve the classifi
 To get classification results using this approach, run `python ML_model.py` and specify the directory where you stored the 5 checkpoints of the CNN model.
 
 ## Inference
+In this last step, we combine the detection results (output of YOLOv5), and the identification results (output of the CNN + lightgbm) to build the final predictions. To generate the csv file of predictions, run the notebook `Inference.ipynb`. You can choose to use either the CNN predictions, the lightgbm predictions, or combine both by taking the mean. The final output will be saved under **predictions.csv**
