@@ -1,5 +1,5 @@
 # SIIM-covid19-detection-classification
-This problem is a Kaggle competition (https://www.kaggle.com/c/siim-covid19-detection). In this competition, we are identifying and localizing COVID-19 abnormalities on chest radiographs. This is an object detection and classification problem. For each test image, we will be predicting a bounding box and class for all findings. Further, for each test study, we should make a determination within the following labels: 'Negative for Pneumonia' 'Typical Appearance' 'Indeterminate Appearance' 'Atypical Appearance'.
+This project is a Kaggle competition (https://www.kaggle.com/c/siim-covid19-detection). In this competition, we are identifying and localizing COVID-19 abnormalities on chest radiographs. This is an object detection and classification problem. For each test image, we will be predicting a bounding box and class for all findings. Further, for each test study, we should make a determination within the following labels: 'Negative for Pneumonia' 'Typical Appearance' 'Indeterminate Appearance' 'Atypical Appearance'.
 
 ## YOLOv5
 The first task is to detect the opacities. To do so, we retrain YOLOv5 on the provided data, as follows:
